@@ -268,3 +268,19 @@ card.style.transform="rotateX(0) rotateY(0)";
 });
 
 });
+
+// Disable Right Click
+
+document.addEventListener("contextmenu",(e)=>{
+
+e.preventDefault();
+
+});
+
+// Welcome Message
+
+window.onload=()=>{
+
+console.log("Welcome To Anjali Portfolio 🚀");
+
+};

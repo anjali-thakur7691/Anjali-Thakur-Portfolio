@@ -1,3 +1,36 @@
+html{
+
+scroll-behavior:smooth;
+
+}
+
+section{
+
+animation:fadeSection .8s ease;
+
+}
+
+@keyframes fadeSection{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
 /* ===========================
    GOOGLE FONT & RESET
 =========================== */
@@ -203,6 +236,15 @@ nav a{
 nav a:hover{
 
     color:var(--purple);
+
+}
+header{
+
+backdrop-filter:blur(15px);
+
+-webkit-backdrop-filter:blur(15px);
+
+background:rgba(10,10,20,.6);
 
 }
 
@@ -1010,6 +1052,9 @@ text-align:center;
 
 transition:.4s;
 
+backdrop-filter: blur(18px);
+-webkit-backdrop-filter: blur(18px);
+
 }
 
 .experience-card:hover{
@@ -1017,6 +1062,8 @@ transition:.4s;
 transform:translateY(-10px);
 
 box-shadow:0 0 35px #8b5cf6;
+
+border:1px solid rgba(139,92,246,.5);
 
 }
 
@@ -1154,6 +1201,9 @@ border:1px solid rgba(255,255,255,.08);
 
 transition:.4s;
 
+backdrop-filter: blur(18px);
+-webkit-backdrop-filter: blur(18px);
+
 }
 
 .certificate-card:hover{
@@ -1161,7 +1211,7 @@ transition:.4s;
 transform:translateY(-10px);
 
 box-shadow:0 0 30px #8b5cf6;
-
+border:1px solid rgba(139,92,246,.5);
 }
 
 .certificate-card i{
@@ -1303,6 +1353,9 @@ transparent);
 
 transition:.8s;
 
+backdrop-filter: blur(18px);
+-webkit-backdrop-filter: blur(18px);
+
 }
 
 .dashboard-card:hover::before{
@@ -1316,6 +1369,8 @@ left:100%;
 transform:translateY(-15px);
 
 box-shadow:0 0 35px #8b5cf6;
+
+border:1px solid rgba(139,92,246,.5);
 
 }
 
@@ -1370,6 +1425,8 @@ background:rgba(255,255,255,.05);
 transition:.4s;
 
 border:1px solid rgba(255,255,255,.08);
+backdrop-filter: blur(18px);
+-webkit-backdrop-filter: blur(18px);
 
 }
 
@@ -1378,6 +1435,7 @@ border:1px solid rgba(255,255,255,.08);
 transform:translateY(-12px);
 
 box-shadow:0 0 35px #8b5cf6;
+border:1px solid rgba(139,92,246,.5);
 
 }
 
@@ -2131,3 +2189,137 @@ margin-bottom:30px;
 color:#d6d6d6;
 
 }
+
+/*=========================
+    BACKGROUND ANIMATION
+=========================*/
+
+.bg-animation{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+overflow:hidden;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+.bg-animation span{
+
+position:absolute;
+
+display:block;
+
+border-radius:50%;
+
+background:rgba(139,92,246,.15);
+
+animation:moveShape 25s linear infinite;
+
+}
+
+.bg-animation span:nth-child(1){
+
+width:220px;
+height:220px;
+
+left:5%;
+top:15%;
+
+}
+
+.bg-animation span:nth-child(2){
+
+width:150px;
+height:150px;
+
+left:80%;
+top:10%;
+
+animation-duration:18s;
+
+}
+
+.bg-animation span:nth-child(3){
+
+width:280px;
+height:280px;
+
+left:60%;
+top:70%;
+
+animation-duration:30s;
+
+}
+
+.bg-animation span:nth-child(4){
+
+width:120px;
+height:120px;
+
+left:25%;
+top:75%;
+
+}
+
+.bg-animation span:nth-child(5){
+
+width:180px;
+height:180px;
+
+left:90%;
+top:55%;
+
+animation-duration:22s;
+
+}
+
+@keyframes moveShape{
+
+0%{
+
+transform:translateY(0) rotate(0deg);
+
+}
+
+50%{
+
+transform:translateY(-40px) rotate(180deg);
+
+}
+
+100%{
+
+transform:translateY(0) rotate(360deg);
+
+}
+
+}
+::selection{
+
+background:#8b5cf6;
+
+color:white;
+
+}
+
+img{
+
+user-select:none;
+
+}
+
+body{
+
+overflow-x:hidden;
+
+}
+
